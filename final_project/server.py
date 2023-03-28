@@ -12,15 +12,15 @@ def hello():
 def englishToFrench():
     textToTranslate = request.args.get('textToTranslate')
      #i have renamed the method after pylint test
-    translated_to_fr = machinetranslation.translator.english_to_french(textToTranslate)
+    translated_to_fr = translator.english_to_french(textToTranslate)
     return translated_to_fr
 
 @app.route("/frenchToEnglish")
 def frenchToEnglish():
     textToTranslate = request.args.get('textToTranslate')
     #i have renamed the method after pylint test
-    translated_to_fr = machinetranslation.translator.french_to_english(textToTranslate)
-    return "Translated text to English"
+    translated_to_fr = translator.french_to_english(textToTranslate)
+    return translated_to_fr
 
 @app.route("/")
 def renderIndexPage():
