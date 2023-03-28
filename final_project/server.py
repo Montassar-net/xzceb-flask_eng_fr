@@ -19,8 +19,8 @@ def englishToFrench():
 def frenchToEnglish():
     textToTranslate = request.args.get('textToTranslate')
     #i have renamed the method after pylint test
-    translated_to_fr = translator.french_to_english(textToTranslate)
-    return translated_to_fr
+    translated_to_en = translator.french_to_english(textToTranslate)
+    return translated_to_en
 
 @app.route("/")
 def renderIndexPage():
